@@ -6,6 +6,7 @@ export default {
     orders: 'Orders',
     finance: 'Finance',
     demandForecast: 'Demand Forecast',
+    restocking: 'Restocking',
     companyName: 'Catalyst Components',
     subtitle: 'Inventory Management System'
   },
@@ -112,6 +113,19 @@ export default {
     onTimeDelivery: 'On-Time Delivery',
     itemsCount: '{count} items',
     quantity: 'Qty',
+    submittedOrders: 'Submitted Orders',
+    noSubmittedOrders: 'No restock orders have been submitted yet',
+    submittedLoadError: 'Failed to load submitted orders',
+    submittedTable: {
+      orderNumber: 'Order Number',
+      submittedDate: 'Submitted',
+      items: 'Items',
+      totalCost: 'Total Cost',
+      leadTime: 'Lead Time',
+      expectedDelivery: 'Expected Delivery',
+      status: 'Status'
+    },
+    days: '{count} days',
     table: {
       orderNumber: 'Order Number',
       orderId: 'Order ID',
@@ -206,7 +220,41 @@ export default {
     backordered: 'Backordered',
     inStock: 'In Stock',
     lowStock: 'Low Stock',
-    adequate: 'Adequate'
+    adequate: 'Adequate',
+    submitted: 'Submitted'
+  },
+
+  // Restocking
+  restocking: {
+    title: 'Restocking',
+    description: 'Plan replenishment of low-stock items within a budget',
+    budget: 'Budget',
+    totalCost: 'Total Cost',
+    remaining: 'Remaining',
+    leadTime: 'Lead Time',
+    days: '{count} days',
+    recommendations: 'Recommended Purchases',
+    partial: 'Partial',
+    partialHint: 'Quantity is limited by the remaining budget',
+    noItems: 'No items can be restocked at this budget',
+    placeOrder: 'Place Order',
+    placing: 'Placing order...',
+    orderPlaced: 'Order {orderNumber} was submitted.',
+    viewOrders: 'View in Orders',
+    orderFailed: 'Failed to place order',
+    loadFailed: 'Failed to load recommendations',
+    retry: 'Retry',
+    table: {
+      sku: 'SKU',
+      name: 'Item',
+      trend: 'Demand Trend',
+      shortfall: 'Shortfall',
+      quantity: 'Order Qty',
+      unitCost: 'Unit Cost',
+      lineTotal: 'Line Total',
+      supplier: 'Supplier',
+      leadTime: 'Lead Time'
+    }
   },
 
   // Trends
