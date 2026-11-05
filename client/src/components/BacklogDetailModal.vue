@@ -130,7 +130,7 @@ const formatDate = (dateString) => {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: var(--tq-overlay);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -139,9 +139,7 @@ const formatDate = (dateString) => {
 }
 
 .modal-container {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  background: var(--tq-bg);
   max-width: 700px;
   width: 100%;
   max-height: 90vh;
@@ -155,32 +153,31 @@ const formatDate = (dateString) => {
   align-items: center;
   justify-content: space-between;
   padding: 1.5rem;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid var(--tq-border);
 }
 
 .modal-title {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--tq-blue);
   letter-spacing: -0.025em;
 }
 
 .close-button {
   background: none;
   border: none;
-  color: #64748b;
+  color: var(--tq-text-muted);
   cursor: pointer;
   padding: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 6px;
   transition: all 0.15s ease;
 }
 
 .close-button:hover {
-  background: #f1f5f9;
-  color: #0f172a;
+  background: var(--tq-tint);
+  color: var(--tq-blue);
 }
 
 .modal-body {
@@ -194,15 +191,14 @@ const formatDate = (dateString) => {
   align-items: center;
   gap: 1.25rem;
   padding-bottom: 1.5rem;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid var(--tq-border);
   margin-bottom: 1.5rem;
 }
 
 .shortage-icon {
   width: 64px;
   height: 64px;
-  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
-  border-radius: 12px;
+  background: var(--bad);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -218,39 +214,38 @@ const formatDate = (dateString) => {
 .item-name {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--tq-blue);
   margin: 0 0 0.5rem 0;
 }
 
 .item-sku {
   font-size: 0.875rem;
-  color: #64748b;
-  font-family: 'Monaco', 'Courier New', monospace;
+  color: var(--tq-text-muted);
+  font-family: inherit;
 }
 
 .priority-badge {
   padding: 0.5rem 1rem;
-  border-radius: 6px;
   font-size: 0.875rem;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.025em;
   flex-shrink: 0;
 }
 
 .priority-badge.high {
-  background: #fecaca;
-  color: #991b1b;
+  background: var(--bad-bg);
+  color: var(--bad);
 }
 
 .priority-badge.medium {
-  background: #fed7aa;
-  color: #92400e;
+  background: var(--warn-bg);
+  color: var(--warn);
 }
 
 .priority-badge.low {
-  background: #dbeafe;
-  color: #1e40af;
+  background: var(--tq-tint);
+  color: var(--tq-blue);
 }
 
 .shortage-summary {
@@ -262,41 +257,40 @@ const formatDate = (dateString) => {
 
 .summary-card {
   padding: 1.25rem;
-  border-radius: 10px;
   border: 2px solid;
 }
 
 .summary-card.danger {
-  border-color: #fecaca;
-  background: #fef2f2;
+  border-color: var(--tq-border);
+  background: var(--bad-bg);
 }
 
 .summary-card.warning {
-  border-color: #fed7aa;
-  background: #fffbeb;
+  border-color: var(--tq-border);
+  background: var(--warn-bg);
 }
 
 .summary-label {
   font-size: 0.813rem;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #64748b;
+  color: var(--tq-text-muted);
   margin-bottom: 0.5rem;
 }
 
 .summary-value {
   font-size: 1.875rem;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--tq-blue);
 }
 
 .summary-card.danger .summary-value {
-  color: #dc2626;
+  color: var(--bad);
 }
 
 .summary-card.warning .summary-value {
-  color: #f59e0b;
+  color: var(--warn);
 }
 
 .info-grid {
@@ -313,27 +307,27 @@ const formatDate = (dateString) => {
 
 .info-label {
   font-size: 0.813rem;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #64748b;
+  color: var(--tq-text-muted);
 }
 
 .info-value {
   font-size: 0.938rem;
-  color: #0f172a;
-  font-weight: 500;
+  color: var(--tq-blue);
+  font-weight: 400;
 }
 
 .info-value.order-id,
 .info-value.sku {
-  font-family: 'Monaco', 'Courier New', monospace;
-  color: #2563eb;
+  font-family: inherit;
+  color: var(--tq-light-blue);
 }
 
 .modal-footer {
   padding: 1.5rem;
-  border-top: 1px solid #e2e8f0;
+  border-top: 1px solid var(--tq-border);
   display: flex;
   justify-content: flex-end;
   gap: 0.75rem;
@@ -341,20 +335,21 @@ const formatDate = (dateString) => {
 
 .btn-secondary {
   padding: 0.625rem 1.25rem;
-  background: #f1f5f9;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  font-weight: 500;
+  background: var(--tq-sand);
+  border: none;
+  font-weight: 700;
   font-size: 0.875rem;
-  color: #334155;
+  color: var(--tq-blue);
   cursor: pointer;
   transition: all 0.15s ease;
   font-family: inherit;
+  text-transform: uppercase;
+  letter-spacing: 0.35px;
 }
 
 .btn-secondary:hover {
-  background: #e2e8f0;
-  border-color: #cbd5e1;
+  background: var(--tq-border);
+  border-color: var(--tq-light-blue);
 }
 
 /* Modal transition animations */

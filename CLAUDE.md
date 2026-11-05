@@ -70,7 +70,14 @@ npm install && npm run dev
 - Styles: `client/src/App.vue`
 
 ## Design System
-- Colors: Slate/gray (#0f172a, #64748b, #e2e8f0)
-- Status: green/blue/yellow/red
-- Charts: Custom SVG, CSS Grid for layouts
+Modeled on trusteq.de. Tokens are CSS variables on `:root` in `client/src/App.vue` - always use `var(--...)`, never hardcode hex/rgba values in views or components.
+- Colors: page background `--tq-bg` #FCFDFE, text/primary TQ Blau #003366, `--tq-navy-2` #004181 (hover), Hellblau #0069D1 (links, accents), Tint #EBF1FB (card fill), Sand #E7E0D0 (secondary buttons), Lime #DAFF7D (primary buttons/active marker only), Gold #AE9966 (logo only), Grau #C3C3C9 (dividers, never text), `--tq-text-muted` #4A5D73. Lime is never used as text on a light background
+- Layout: full-width navy header band with the light logo; borderless Tint cards with generous padding; tables with thin row dividers and uppercase muted headers; no outlines around cards, no shadows, no gradients, sharp corners
+- Buttons: primary = Lime fill + navy bold uppercase text; secondary = Sand; active nav = lime underline, not a filled tab
+- Status: green/blue/yellow/red as muted semantic tokens (`--ok`, `--warn`, `--bad`, info = Hellblau on Tint); always keep the text label, never rely on color alone
+- Contrast: keep WCAG AA (4.5:1 text, 3:1 large text/UI) for every text/background pair
+- Fonts: Lora 500 for headings, Karla 400/700 for body and labels, self-hosted via `@fontsource/lora` and `@fontsource/karla`; stacks fall back to Japanese-capable system fonts
+- Logo: `client/src/assets/trusteq-logo-light.svg` (white wordmark) on the navy header, `trusteq-logo.svg` on light backgrounds; do not recolor
+- Charts: Custom SVG, CSS Grid for layouts; categorical colors come from `--chart-1..5` / `client/src/utils/palette.js` so a category has the same color on every page
+- Do not run prettier over existing files: the codebase uses single quotes and no semicolons, a default run reformats everything
 - No emojis in UI

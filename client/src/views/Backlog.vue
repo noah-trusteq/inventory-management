@@ -32,7 +32,7 @@
           <h3 class="card-title">{{ t('backlog.items') }}</h3>
         </div>
         <div v-if="backlogItems.length === 0" style="padding: 3rem; text-align: center;">
-          <p style="font-size: 1.125rem; color: #10b981; font-weight: 600;">
+          <p style="font-size: 1.125rem; color: var(--ok); font-weight: 700;">
             {{ t('backlog.empty') }}
           </p>
         </div>
@@ -63,7 +63,7 @@
                   </span>
                 </td>
                 <td>
-                  <span :style="{ color: item.days_delayed > 7 ? '#ef4444' : '#f59e0b' }">
+                  <span :style="{ color: item.days_delayed > 7 ? 'var(--bad)' : 'var(--warn)' }">
                     {{ t('backlog.daysDelayed', { count: item.days_delayed }) }}
                   </span>
                 </td>

@@ -259,8 +259,8 @@ export default {
 
 .budget-label {
   font-size: 0.875rem;
-  font-weight: 600;
-  color: #64748b;
+  font-weight: 700;
+  color: var(--tq-text-muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -268,15 +268,14 @@ export default {
 .budget-value {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--tq-blue);
 }
 
 .budget-slider {
   width: 100%;
   height: 6px;
   appearance: none;
-  background: #e2e8f0;
-  border-radius: 3px;
+  background: var(--tq-border);
   outline: none;
   cursor: pointer;
 }
@@ -285,23 +284,19 @@ export default {
   appearance: none;
   width: 18px;
   height: 18px;
-  border-radius: 50%;
-  background: #0f172a;
+  background: var(--tq-blue);
   border: 2px solid white;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .budget-slider::-moz-range-thumb {
   width: 18px;
   height: 18px;
-  border-radius: 50%;
-  background: #0f172a;
+  background: var(--tq-blue);
   border: 2px solid white;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .budget-slider:focus-visible {
-  outline: 2px solid #3b82f6;
+  outline: 2px solid var(--tq-light-blue);
   outline-offset: 4px;
 }
 
@@ -310,27 +305,28 @@ export default {
   justify-content: space-between;
   margin-top: 0.5rem;
   font-size: 0.813rem;
-  color: #64748b;
+  color: var(--tq-text-muted);
 }
 
 .place-order-btn {
-  background: #0f172a;
-  color: white;
+  background: var(--tq-lime);
+  color: var(--tq-blue);
   border: none;
-  border-radius: 6px;
   padding: 0.5rem 1.25rem;
   font-size: 0.875rem;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   transition: background 0.2s;
+  text-transform: uppercase;
+  letter-spacing: 0.35px;
 }
 
 .place-order-btn:hover:not(:disabled) {
-  background: #1e293b;
+  background: var(--tq-blue);
 }
 
 .place-order-btn:disabled {
-  background: #cbd5e1;
+  background: var(--tq-border);
   cursor: not-allowed;
 }
 
@@ -340,28 +336,27 @@ export default {
 
 .notice {
   padding: 0.75rem 1rem;
-  border-radius: 8px;
   margin-bottom: 1.5rem;
   font-size: 0.875rem;
 }
 
 .notice-success {
-  background: #d1fae5;
-  color: #065f46;
-  border: 1px solid #10b981;
+  background: var(--ok-bg);
+  color: var(--ok);
+  border: 1px solid var(--ok);
 }
 
 .notice-success a {
   margin-left: 0.5rem;
-  font-weight: 600;
-  color: #065f46;
+  font-weight: 700;
+  color: var(--ok);
   text-decoration: underline;
 }
 
 .notice-error {
-  background: #fee2e2;
-  color: #991b1b;
-  border: 1px solid #ef4444;
+  background: var(--bad-bg);
+  color: var(--bad);
+  border: 1px solid var(--bad);
 }
 
 .load-error {
@@ -372,13 +367,12 @@ export default {
 }
 
 .retry-btn {
-  background: #991b1b;
+  background: var(--bad);
   color: white;
   border: none;
-  border-radius: 6px;
   padding: 0.375rem 1rem;
   font-size: 0.813rem;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
 }
 
@@ -395,6 +389,6 @@ export default {
 .empty-state {
   padding: 2rem;
   text-align: center;
-  color: #64748b;
+  color: var(--tq-text-muted);
 }
 </style>
