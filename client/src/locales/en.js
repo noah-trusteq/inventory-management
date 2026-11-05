@@ -311,6 +311,30 @@ export default {
     selectLanguage: 'Select Language'
   },
 
+  // Purchase Order Modal
+  purchaseOrder: {
+    createTitle: 'Create Purchase Order',
+    viewTitle: 'Purchase Order Details',
+    supplier: 'Supplier Name',
+    quantity: 'Quantity',
+    unitCost: 'Unit Cost',
+    expectedDelivery: 'Expected Delivery Date',
+    notes: 'Notes',
+    total: 'Total Cost',
+    status: 'Status',
+    createdDate: 'Created',
+    poId: 'PO ID',
+    create: 'Create Purchase Order',
+    creating: 'Creating...',
+    loadError: 'Failed to load purchase order',
+    createError: 'Failed to create purchase order',
+    alreadyExists: 'This backlog item already has a purchase order',
+    supplierRequired: 'Supplier name is required',
+    quantityInvalid: 'Quantity must be greater than zero',
+    unitCostInvalid: 'Unit cost must be zero or greater',
+    dateRequired: 'Expected delivery date is required'
+  },
+
   // Common
   common: {
     loading: 'Loading...',

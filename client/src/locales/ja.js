@@ -311,6 +311,30 @@ export default {
     selectLanguage: '言語を選択'
   },
 
+  // Purchase Order Modal
+  purchaseOrder: {
+    createTitle: '発注書を作成',
+    viewTitle: '発注書の詳細',
+    supplier: '仕入先名',
+    quantity: '数量',
+    unitCost: '単価',
+    expectedDelivery: '納品予定日',
+    notes: '備考',
+    total: '合計金額',
+    status: 'ステータス',
+    createdDate: '作成日',
+    poId: '発注書ID',
+    create: '発注書を作成',
+    creating: '作成中...',
+    loadError: '発注書の読み込みに失敗しました',
+    createError: '発注書の作成に失敗しました',
+    alreadyExists: 'この未出荷項目には既に発注書があります',
+    supplierRequired: '仕入先名は必須です',
+    quantityInvalid: '数量は1以上である必要があります',
+    unitCostInvalid: '単価は0以上である必要があります',
+    dateRequired: '納品予定日は必須です'
+  },
+
   // Common
   common: {
     loading: '読み込み中...',
