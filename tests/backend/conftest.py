@@ -12,6 +12,20 @@ server_path = Path(__file__).parent.parent.parent / "server"
 sys.path.insert(0, str(server_path))
 
 from main import app
+from mock_data import purchase_orders, restock_orders, tasks
+
+
+@pytest.fixture(autouse=True)
+def reset_runtime_data():
+    """Restore the in-memory lists that POST endpoints mutate so tests stay independent.
+
+    The lists are shared by reference with main.py, so they must be restored in place
+    (slice assignment) rather than rebound.
+    """
+    snapshots = [(lst, list(lst)) for lst in (purchase_orders, restock_orders, tasks)]
+    yield
+    for lst, original in snapshots:
+        lst[:] = original
 
 
 @pytest.fixture

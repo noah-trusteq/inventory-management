@@ -6,6 +6,8 @@ export default {
     orders: '注文',
     finance: '財務',
     demandForecast: '需要予測',
+    restocking: '補充発注',
+    reports: 'レポート',
     companyName: '触媒コンポーネンツ',
     subtitle: '在庫管理システム'
   },
@@ -112,6 +114,19 @@ export default {
     onTimeDelivery: '定時配達',
     itemsCount: '{count}件',
     quantity: '数量',
+    submittedOrders: '発注済み注文',
+    noSubmittedOrders: '発注済みの補充注文はまだありません',
+    submittedLoadError: '発注済み注文の読み込みに失敗しました',
+    submittedTable: {
+      orderNumber: '注文番号',
+      submittedDate: '発注日',
+      items: '品目',
+      totalCost: '合計コスト',
+      leadTime: 'リードタイム',
+      expectedDelivery: '予定納品日',
+      status: 'ステータス'
+    },
+    days: '{count}日',
     table: {
       orderNumber: '注文番号',
       orderId: '注文ID',
@@ -206,7 +221,41 @@ export default {
     backordered: 'バックオーダー',
     inStock: '在庫あり',
     lowStock: '在庫僅少',
-    adequate: '適量'
+    adequate: '適量',
+    submitted: '発注済み'
+  },
+
+  // Restocking
+  restocking: {
+    title: '補充発注',
+    description: '予算内で在庫不足品目の補充を計画します',
+    budget: '予算',
+    totalCost: '合計コスト',
+    remaining: '残予算',
+    leadTime: 'リードタイム',
+    days: '{count}日',
+    recommendations: '推奨発注品目',
+    partial: '一部',
+    partialHint: '残予算の範囲内に数量が制限されています',
+    noItems: 'この予算で補充できる品目はありません',
+    placeOrder: '発注する',
+    placing: '発注中...',
+    orderPlaced: '注文 {orderNumber} を送信しました。',
+    viewOrders: '注文を表示',
+    orderFailed: '発注に失敗しました',
+    loadFailed: '推奨品目の読み込みに失敗しました',
+    retry: '再試行',
+    table: {
+      sku: 'SKU',
+      name: '品目',
+      trend: '需要トレンド',
+      shortfall: '不足数',
+      quantity: '発注数量',
+      unitCost: '単価',
+      lineTotal: '小計',
+      supplier: 'サプライヤー',
+      leadTime: 'リードタイム'
+    }
   },
 
   // Trends
@@ -309,6 +358,83 @@ export default {
     english: 'English',
     japanese: '日本語',
     selectLanguage: '言語を選択'
+  },
+
+  // Purchase Order Modal
+  purchaseOrder: {
+    createTitle: '発注書を作成',
+    viewTitle: '発注書の詳細',
+    supplier: '仕入先名',
+    quantity: '数量',
+    unitCost: '単価',
+    expectedDelivery: '納品予定日',
+    notes: '備考',
+    total: '合計金額',
+    status: 'ステータス',
+    createdDate: '作成日',
+    poId: '発注書ID',
+    create: '発注書を作成',
+    creating: '作成中...',
+    loadError: '発注書の読み込みに失敗しました',
+    createError: '発注書の作成に失敗しました',
+    alreadyExists: 'この未出荷項目には既に発注書があります',
+    supplierRequired: '仕入先名は必須です',
+    quantityInvalid: '数量は1以上である必要があります',
+    unitCostInvalid: '単価は0以上である必要があります',
+    dateRequired: '納品予定日は必須です'
+  },
+
+  // Reports
+  reports: {
+    title: 'パフォーマンスレポート',
+    description: '四半期の業績指標と月次トレンドを表示します',
+    loading: 'レポートを読み込み中...',
+    loadError: 'レポートの読み込みに失敗しました',
+    quarterlyPerformance: '四半期業績',
+    monthlyRevenueTrend: '月次売上トレンド',
+    momAnalysis: '前月比分析',
+    quarter: '四半期',
+    month: '月',
+    orders: '注文数',
+    revenue: '売上',
+    change: '増減',
+    growthRate: '成長率',
+    totalOrders: '総注文数',
+    totalRevenue: '総売上',
+    avgOrderValue: '平均注文額',
+    fulfillmentRate: '履行率',
+    totalRevenueYtd: '総売上（年初来）',
+    avgMonthlyRevenue: '月平均売上',
+    totalOrdersYtd: '総注文数（年初来）',
+    bestQuarter: '最高業績の四半期',
+    quarterLabel: '{year}年第{quarter}四半期',
+    notAvailable: '該当なし'
+  },
+
+  // Backlog
+  backlog: {
+    title: 'バックログ管理',
+    description: '在庫不足を追跡し解消します',
+    loading: 'バックログを読み込み中...',
+    loadError: 'バックログの読み込みに失敗しました',
+    highPriority: '優先度：高',
+    mediumPriority: '優先度：中',
+    lowPriority: '優先度：低',
+    totalItems: 'バックログ総数',
+    items: 'バックログ項目',
+    empty: 'バックログ項目はありません - すべての注文を履行できます！',
+    unitsShort: '{count}個不足',
+    daysDelayed: '{count}日',
+    table: {
+      orderId: '注文ID',
+      sku: 'SKU',
+      itemName: '品名',
+      quantityNeeded: '必要数量',
+      quantityAvailable: '在庫数量',
+      shortage: '不足',
+      daysDelayed: '遅延日数',
+      priority: '優先度'
+    }
   },
 
   // Common

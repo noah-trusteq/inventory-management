@@ -35,5 +35,10 @@ recent_transactions = load_json_file('transactions.json')
 # Load purchase orders
 purchase_orders = load_json_file('purchase_orders.json')
 
+# Runtime-created records. These start empty and are only appended to / removed from in place:
+# main.py imports them by name, so rebinding here or there would silently desync the two modules.
+restock_orders = load_json_file('restock_orders.json')
+tasks = load_json_file('tasks.json')
+
 # All data is now loaded from JSON files in the data/ directory
 # This allows for easier maintenance and updates of the sample data
