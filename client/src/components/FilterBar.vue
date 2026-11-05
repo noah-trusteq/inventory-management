@@ -102,12 +102,19 @@ export default {
 
 <style scoped>
 .filters-bar {
-  background: #f8fafc;
-  border-bottom: 1px solid #e2e8f0;
+  background: var(--tq-tint);
+  border-bottom: 1px solid var(--tq-border);
   padding: 0.75rem 0;
   position: sticky;
-  top: 70px;
+  top: 72px;
   z-index: 90;
+}
+
+/* Header wraps to two rows on narrow screens, so a fixed sticky offset would overlap it */
+@media (max-width: 1180px) {
+  .filters-bar {
+    position: static;
+  }
 }
 
 .filters-container {
@@ -124,6 +131,7 @@ export default {
   align-items: center;
   gap: 1rem;
   flex: 1;
+  flex-wrap: wrap;
 }
 
 .filter-group {
@@ -134,32 +142,32 @@ export default {
 
 .filter-group label {
   font-size: 0.75rem;
-  font-weight: 600;
-  color: #64748b;
+  font-weight: 700;
+  color: var(--tq-text-muted);
   white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .filter-select {
   padding: 0.4rem 0.75rem;
-  border: 1px solid #cbd5e1;
-  border-radius: 6px;
+  border: 1px solid var(--tq-border);
   font-size: 0.813rem;
-  color: #0f172a;
+  color: var(--tq-blue);
   background: white;
   cursor: pointer;
   transition: all 0.2s;
-  font-weight: 500;
-  min-width: 140px;
+  font-weight: 400;
+  min-width: 120px;
 }
 
 .filter-select:hover {
-  border-color: #94a3b8;
+  border-color: var(--tq-light-blue);
 }
 
 .filter-select:focus {
-  outline: none;
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  border-color: var(--tq-light-blue);
+  outline: 2px solid var(--tq-light-blue);
 }
 
 .reset-filters-btn {
@@ -167,23 +175,22 @@ export default {
   align-items: center;
   justify-content: center;
   padding: 0.4rem;
-  background: white;
-  border: 1px solid #e2e8f0;
-  border-radius: 6px;
-  color: #64748b;
+  background: var(--tq-sand);
+  border: none;
+  color: var(--tq-blue);
   cursor: pointer;
   transition: all 0.2s;
   flex-shrink: 0;
 }
 
 .reset-filters-btn:hover:not(:disabled) {
-  background: #f8fafc;
-  border-color: #cbd5e1;
-  color: #0f172a;
+  background: var(--tq-lime);
+  border-color: transparent;
+  color: var(--tq-blue);
 }
 
 .reset-filters-btn:disabled {
-  opacity: 0.3;
+  opacity: 0.5;
   cursor: not-allowed;
 }
 

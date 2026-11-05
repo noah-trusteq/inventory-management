@@ -281,11 +281,9 @@ export default {
 }
 
 .card {
-  background: white;
-  border-radius: 12px;
+  background: var(--tq-tint);
   padding: 1.5rem;
   margin-bottom: 1.5rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .card-header {
@@ -294,8 +292,8 @@ export default {
 
 .card-title {
   font-size: 1.25rem;
-  font-weight: 600;
-  color: #0f172a;
+  font-weight: 700;
+  color: var(--tq-blue);
   margin: 0;
 }
 
@@ -305,21 +303,21 @@ export default {
 }
 
 .reports-table th {
-  background: #f8fafc;
+  background: transparent;
   padding: 0.75rem;
   text-align: left;
-  font-weight: 600;
-  color: #64748b;
-  border-bottom: 2px solid #e2e8f0;
+  font-weight: 700;
+  color: var(--tq-text-muted);
+  border-bottom: 1px solid var(--tq-border);
 }
 
 .reports-table td {
   padding: 0.75rem;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid var(--tq-border);
 }
 
 .reports-table tr:hover {
-  background: #f8fafc;
+  background: var(--white);
 }
 
 .chart-container {
@@ -352,20 +350,19 @@ export default {
 
 .bar {
   width: 100%;
-  background: linear-gradient(to top, #3b82f6, #60a5fa);
-  border-radius: 4px 4px 0 0;
+  background: var(--tq-light-blue);
   transition: all 0.3s;
   cursor: pointer;
 }
 
 .bar:hover {
-  background: linear-gradient(to top, #2563eb, #3b82f6);
+  background: var(--tq-light-blue);
 }
 
 .bar-label {
   margin-top: 0.5rem;
   font-size: 0.75rem;
-  color: #64748b;
+  color: var(--tq-text-muted);
   text-align: center;
   transform: rotate(-45deg);
   white-space: nowrap;
@@ -380,73 +377,68 @@ export default {
 }
 
 .stat-card {
-  background: white;
-  border-radius: 12px;
+  background: var(--tq-tint);
   padding: 1.5rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  border-left: 4px solid #3b82f6;
 }
 
 .stat-label {
   font-size: 0.875rem;
-  color: #64748b;
+  color: var(--tq-text-muted);
   margin-bottom: 0.5rem;
 }
 
 .stat-value {
   font-size: 1.875rem;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--tq-blue);
 }
 
 .badge {
   padding: 0.25rem 0.75rem;
-  border-radius: 9999px;
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .badge.success {
-  background: #dcfce7;
-  color: #166534;
+  background: var(--ok-bg);
+  color: var(--ok);
 }
 
 .badge.warning {
-  background: #fef3c7;
-  color: #92400e;
+  background: var(--warn-bg);
+  color: var(--warn);
 }
 
 .badge.danger {
-  background: #fee2e2;
-  color: #991b1b;
+  background: var(--bad-bg);
+  color: var(--bad);
 }
 
 .positive-change {
-  color: #16a34a;
-  font-weight: 600;
+  color: var(--ok);
+  font-weight: 700;
 }
 
 .negative-change {
-  color: #dc2626;
-  font-weight: 600;
+  color: var(--bad);
+  font-weight: 700;
 }
 
 .empty {
   text-align: center;
-  color: #64748b;
+  color: var(--tq-text-muted);
 }
 
 .loading {
   text-align: center;
   padding: 3rem;
-  color: #64748b;
+  color: var(--tq-text-muted);
 }
 
 .error {
-  background: #fee2e2;
-  color: #991b1b;
+  background: var(--bad-bg);
+  color: var(--bad);
   padding: 1rem;
-  border-radius: 8px;
   margin: 1rem 0;
 }
 </style>
